@@ -4,7 +4,11 @@ Official repository for ["InstructIR: A Benchmark for Instruction Following of I
 
 We introduce InstructIR, a novel benchmark specifically designed to evaluate the instruction following ability in information retrieval models. Our approach focuses on user-aligned instructions tailored to each query instance, reflecting the diverse characteristics inherent in real-world search scenarios.
 
-![InstructIR](assets/figure_main_instructIR.pdf)
+
+<p align="center">
+  <img src="assets/figure_main_instructIR.png" width="60%" height="60%">
+</p>
+
 
 ## Dataset Construction Pipeline
 
@@ -12,6 +16,9 @@ Constructing a framework to evaluate instruction-following capabilities in infor
 
 The development of our InstructIR evaluation datasets adheres to a systematic set of steps as shown in the figure below:
 
-![Dataset Construction Pipeline](assets/figure_datacreation_pipeline.pdf)
+<p align="center">
+  <img src="assets/figure_datacreation_pipeline.png" width="80%" height="80%">
+</p>
+
 
 Full pipeline codes are under [data_creation](data_creation/).
