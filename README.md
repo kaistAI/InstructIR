@@ -1,6 +1,6 @@
 # InstructIR
 
-Official repository for ["InstructIR: A Benchmark for Instruction Following of Information Retrieval Models"]()
+Official repository for ["InstructIR: A Benchmark for Instruction Following of Information Retrieval Models"](http://arxiv.org/abs/2402.14334)
 
 We introduce InstructIR, a novel benchmark specifically designed to evaluate the instruction following ability in information retrieval models. Our approach focuses on user-aligned instructions tailored to each query instance, reflecting the diverse characteristics inherent in real-world search scenarios.
 
