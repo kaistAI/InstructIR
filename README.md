@@ -9,6 +9,10 @@ We introduce InstructIR, a novel benchmark specifically designed to evaluate the
   <img src="assets/figure_main_instructIR.png" width="60%" height="60%">
 </p>
 
+## Setup
+```
+pip install -r requirements.txt
+```
 
 ## Dataset Construction Pipeline
 
@@ -22,3 +26,19 @@ The development of our InstructIR evaluation datasets adheres to a systematic se
 
 
 Full pipeline codes are under [data_creation](data_creation/).
+
+
+
+## Citation
+Please cite if you use the data or code in this repo.
+
+```
+@article{oh2024instructir,
+      title={INSTRUCTIR: A Benchmark for Instruction Following of Information Retrieval Models}, 
+      author={Hanseok Oh and Hyunji Lee and Seonghyeon Ye and Haebin Shin and Hansol Jang and Changwook Jun and Minjoon Seo},
+      year={2024},
+      eprint={2402.14334},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
+}
+```
