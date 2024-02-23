@@ -2,7 +2,7 @@
 
 SPLIT='test'
 CORPUS='corpus.jsonl'
-DATA='/workspace/directory/instructIR/INSTRUCTIR'
+DATA='/workspace/directory/InstructIR/INSTRUCTIR'
 
 echo "SPLIT = $SPLIT"
 echo "CORPUS = $CORPUS"

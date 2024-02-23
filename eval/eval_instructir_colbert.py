@@ -1,24 +1,15 @@
 import os 
 import argparse 
-from easydict import EasyDict
-import json
 import os
-import csv
-import io 
 import torch 
 import sys 
 import random
-import logging
 import pickle 
 from datasets import load_dataset, load_from_disk
 import torch 
 
 from beir.datasets.data_loader import GenericDataLoader
-from beir.retrieval.evaluation import EvaluateRetrieval
-from beir.retrieval import models
-from beir.retrieval.search.dense import DenseRetrievalExactSearch as DRES
 
-import colbert
 from colbert import Indexer, Searcher
 from colbert.infra import Run, RunConfig, ColBERTConfig
 from colbert.data import Queries, Collection

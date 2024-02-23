@@ -83,8 +83,8 @@ def main(args):
           len(corpus),len(queries),len(instruction_only_queries), len(w_o_instruction_queries) ,len(qrels), len(w_o_instruction_qrels))
 
 
-    if args.og_path and os.path.exists(args.og_path):
-        og_path = args.og_path
+    if args.og_data_path and os.path.exists(args.og_data_path):
+        og_path = args.og_data_path
     else:
         dataset = "msmarco"
         url = "https://public.ukp.informatik.tu-darmstadt.de/thakur/BEIR/datasets/{}.zip".format(dataset)

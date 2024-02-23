@@ -1,8 +1,6 @@
 from tqdm import tqdm 
 from openai import OpenAI
-import random 
-from beir import util, LoggingHandler
-from custom_data_loader import GenericDataLoader
+from beir.datasets.data_loader import GenericDataLoader
 import os
 import json
 import pickle 
@@ -51,7 +49,7 @@ def main(args):
                             Scenario 2: {generate the second scenario} [END]
 
                             Scenario 10: {generate the last scenario} [END]
-                            - Please do not generate any other opening, closing, and explanations. Just generate the set of scenarios!""" + f"\nQuery: {query['text']}"
+                            - Please do not generate any other opening, closing, and explanations. Just generate the set of scenarios!""" + f"\nQuery: {query}"
             }
                     ],
                     temperature=temperature,
@@ -74,7 +72,7 @@ def main(args):
 
         results.append({
             "query_id": qid,
-            "input": query['text'],
+            "input": query,
             "generated_text": response,
             "metadata": {
                 "input_type": 'step2', 
@@ -117,7 +115,7 @@ if __name__=="__main__":
     parser = argparse.ArgumentParser(
         formatter_class=argparse.ArgumentDefaultsHelpFormatter)
     parser.add_argument("--open_ai_api_key", type=str,required=True,help="OPENAI_API_KEY")
-    parser.add_argument("--data_path", type=str, default="../data/MSMARCO/beir_dataset/msmarco/filtered_version" ,help="filtered dataset folder after stage 1")
+    parser.add_argument("--data_path", type=str, default="./msmarco/filtered_version" ,help="filtered dataset folder after stage 1")
     parser.add_argument("--save_path", type=str, default="generated_data/step2_generate_instruction" ,help="save path")
 
     args, _ = parser.parse_known_args()

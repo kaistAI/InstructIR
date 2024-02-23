@@ -3,7 +3,7 @@ DEVICE='0'
 SPLIT='test'
 CORPUS='corpus.jsonl'
 BSZ=4
-DATA='/workspace/directory/instructIR/INSTRUCTIR'
+DATA='/workspace/directory/InstructIR/INSTRUCTIR'
 
 echo "DEVICE = $DEVICE"
 echo "SPLIT = $SPLIT"

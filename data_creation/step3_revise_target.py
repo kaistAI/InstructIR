@@ -1,8 +1,6 @@
 from tqdm import tqdm 
 from openai import OpenAI
-import random 
-from beir import util, LoggingHandler
-from custom_data_loader import GenericDataLoader
+from beir.datasets.data_loader import GenericDataLoader
 import os
 import json
 import pickle 
@@ -150,7 +148,7 @@ if __name__=="__main__":
     parser = argparse.ArgumentParser(
         formatter_class=argparse.ArgumentDefaultsHelpFormatter)
     parser.add_argument("--open_ai_api_key", type=str,required=True,help="OPENAI_API_KEY")
-    parser.add_argument("--data_path", type=str, default="../data/MSMARCO/beir_dataset/msmarco/filtered_version" ,help="filtered dataset folder after stage 1")
+    parser.add_argument("--data_path", type=str, default="./msmarco/filtered_version" ,help="filtered dataset folder after stage 1")
     parser.add_argument("--step2_output_file", type=str, default="generated_data/step2_generate_instruction/processed_dataset.step2_generate_instruction.json" ,help="filtered dataset folder after stage 1")
     parser.add_argument("--save_path", type=str, default="generated_data/step3_revise_target" ,help="save path")
     
