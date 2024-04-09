@@ -42,3 +42,7 @@ Please cite if you use the data or code in this repo.
       primaryClass={cs.CL}
 }
 ```
+If you have any questions about our paper, please contact Hanseok Oh (hanseok.pro[at]google[dot]com) or open an issue, and mention @hanseokOh
+
+## License
+See the [LICENSE](LICENSE) file for more details.
