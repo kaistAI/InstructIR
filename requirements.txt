@@ -3,3 +3,4 @@ InstructorEmbedding
 peft
 beir
 sentence-transformers==2.2.2
+protobuf
