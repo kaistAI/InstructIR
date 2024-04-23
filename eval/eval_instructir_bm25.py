@@ -65,6 +65,12 @@ def main(args):
     #### Retrieve pyserini results (format of results is identical to qrels)
     results = json.loads(requests.post(docker_beir_pyserini + "/lexical/batch_search/", json=payload).text)["results"]
 
+    # save the results
+    if not os.path.exists('model_pred/bm25'):
+        os.makedirs('model_pred/bm25')
+    with open('model_pred/bm25/results.pickle','wb') as f:
+        pickle.dump(results,f)
+
     logging.info(f"searched results: {len(results)}")
     #### Retrieve RM3 expanded pyserini results (format of results is identical to qrels)
     # results = json.loads(requests.post(docker_beir_pyserini + "/lexical/rm3/batch_search/", json=payload).text)["results"]

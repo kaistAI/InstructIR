@@ -232,7 +232,7 @@ Relevant: """
         instructions = kwargs["instructions"]
         if instructions is not None and instructions[0] is not None:
             # print(f"Adding instructions to LLAMA queries")
-            queries = [self.query_instruct_template.format(instruction=i, query=q).strip() for i, q in zip(instructions, queries)]
+            queries = [self.query_instruct_template.format(instruction=i, query=q + "?").strip() for i, q in zip(instructions, queries)]
 
         prompts = [
             self.template.format(query=query, text=text) for (query, text) in zip(queries, passages)
@@ -276,6 +276,7 @@ class MistralReranker(LlamaReranker):
 
     def __init__(self, model_name_or_path: str, **kwargs):
         # use the base class for everything except template
+        kwargs["fp_options"] = "float16"
         super().__init__(model_name_or_path, **kwargs)
         self.template = """<s>[INST] You are an expert Google searcher, whose job is to determine if the following document is relevant to the query (true/false).
 Query: {query}
@@ -291,7 +292,7 @@ class FollowIRReranker(LlamaReranker):
 
     def __init__(self, model_name_or_path: str, **kwargs):
         # use the base class for everything except template
-        kwargs["fp_options"] = "bfloat16"
+        kwargs["fp_options"] = "float16"
         super().__init__(model_name_or_path, **kwargs)
         self.template = """<s> [INST] You are an expert Google searcher, whose job is to determine if the following document is relevant to the query (true/false). Answer using only one word, one of those two choices.
 

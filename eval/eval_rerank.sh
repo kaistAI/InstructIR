@@ -2,7 +2,7 @@
 
 SPLIT='test'
 CORPUS='corpus.jsonl'
-DATA='/brtx/606-nvme2/oweller2/FollowIR/InstructIR/INSTRUCTIR'
+DATA='INSTRUCTIR'
 
 echo "SPLIT = $SPLIT"
 echo "CORPUS = $CORPUS"
@@ -15,7 +15,12 @@ echo "DATA = $DATA"
     --data_path $DATA \
     --corpus_file $CORPUS \
     --split $SPLIT \
-    --model_name $1
+    --model_name $1 \
+    --n_shards $2 \
+    --shard_id $3 \
+    --rerank_model $4 
+
+
 
 ########################################################
 ###### - version : Analysis - Order Sensitivity
