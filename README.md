@@ -2,12 +2,17 @@
 
 Official repository for ["InstructIR: A Benchmark for Instruction Following of Information Retrieval Models"](http://arxiv.org/abs/2402.14334)
 
+
 We introduce InstructIR, a novel benchmark specifically designed to evaluate the instruction following ability in information retrieval models. Our approach focuses on user-aligned instructions tailored to each query instance, reflecting the diverse characteristics inherent in real-world search scenarios.
 
 
 <p align="center">
   <img src="assets/figure_main_instructIR.png" width="60%" height="60%">
 </p>
+
+
+You can check our InstructIR dataset in <a href="https://huggingface.co/datasets/kaist-ai/InstructIR">HF Dataset</a> now!
+
 
 ## Setup
 ```
